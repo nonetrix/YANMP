@@ -8,3 +8,34 @@ Music
 Player
 
 or yanmp
+
+plans:
+
+• ncurses UI
+
+• configuration file
+
+• music folders ✅?
+
+• shuffle ✅
+
+• time stamps and remaining time and etc
+
+• pause and play and rewind
+
+• visualizer
+
+• w3m based album art
+
+• favorites
+
+• youtube-dl playlist sync
+
+• youtube support
+
+• playlists
+
+• changeable colors or themes
+
+• sort by most played
+

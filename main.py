@@ -10,14 +10,12 @@ MusicFolder = "/home/nonetrix/games/music"
 class PlayerThread(Thread):
     def run(self):
         if SongSelected.endswith('.mp3'):  
-            song = AudioSegment.from_mp3(SongSelected)
-            play(song)
+            
+            play(AudioSegment.from_mp3(SongSelected))
         if SongSelected.endswith('.wav'):  
-            song = AudioSegment.from_wav(SongSelected)
-            play(song)
+            play(AudioSegment.from_wav(SongSelected))
         if SongSelected.endswith('.ogg'):  
-            song = AudioSegment.from_ogg(SongSelected)
-            play(song)
+            play(AudioSegment.from_ogg(SongSelected))
         else:
             print("error bad file format")
             

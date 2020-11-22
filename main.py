@@ -10,7 +10,6 @@ MusicFolder = "/home/nonetrix/games/music"
 class PlayerThread(Thread):
     def run(self):
         if SongSelected.endswith('.mp3'):  
-            
             play(AudioSegment.from_mp3(SongSelected))
         if SongSelected.endswith('.wav'):  
             play(AudioSegment.from_wav(SongSelected))

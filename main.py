@@ -15,9 +15,7 @@ class PlayerThread(Thread):
             play(AudioSegment.from_wav(SongSelected))
         if SongSelected.endswith('.ogg'):  
             play(AudioSegment.from_ogg(SongSelected))
-        else:
-            print("error bad file format")
-            
+
 class PrinterTread(Thread):
     def run(self):
         while True:

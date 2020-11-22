@@ -7,8 +7,6 @@ from threading import Thread
 #MusicFolder = "./testfolder"
 MusicFolder = "/home/nonetrix/games/music"
 
-SongSelected = MusicFolder + "/" + random.choice(os.listdir(MusicFolder))
-
 class PlayerThread(Thread):
     def run(self):
         if SongSelected.endswith('.mp3'):  
@@ -21,9 +19,8 @@ class PlayerThread(Thread):
             song = AudioSegment.from_ogg(SongSelected)
             play(song)
         else:
-            print("error audio file unsupported try mp3 wav ogg")
+            print("error bad file format")
             
-
 class PrinterTread(Thread):
     def run(self):
         while True:
@@ -35,9 +32,9 @@ t2 = PrinterTread(args=("SongSelected"))
 
 while True:
     if t.is_alive() is False:
+        SongSelected = MusicFolder + "/" + random.choice(os.listdir(MusicFolder))
         t = PlayerThread(args=("SongSelected"))
         t.start()
-        SongSelected = MusicFolder + "/" + random.choice(os.listdir(MusicFolder))
     if t2.is_alive() is False:
         t2 = PrinterTread(args=("SongSelected"))
         t2.start()

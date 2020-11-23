@@ -13,7 +13,6 @@ while True:
         pygame.mixer.init(tag.samplerate)
         pygame.mixer.music.load(SongSelected)
         stdscr.addstr(SongSelected)
-        stdscr.refresh()
         pygame.mixer.music.play()
         while pygame.mixer.music.get_busy(): 
                 time.sleep(1)

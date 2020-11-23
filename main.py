@@ -15,5 +15,5 @@ while True:
         stdscr.addstr(SongSelected)
         stdscr.refresh()
         pygame.mixer.music.play()
-        time.sleep(tag.duration)
-        stdscr.clear()
+        while pygame.mixer.music.get_busy(): 
+                stdscr.clear()

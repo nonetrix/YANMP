@@ -16,4 +16,6 @@ while True:
         stdscr.refresh()
         pygame.mixer.music.play()
         while pygame.mixer.music.get_busy(): 
-                stdscr.clear()
+                time.sleep(1)
+                stdscr.refresh()
+        stdscr.clear()

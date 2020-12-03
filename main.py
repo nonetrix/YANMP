@@ -25,6 +25,6 @@ while True:
                             pygame.mixer.music.pause()
                             pause = 1
                 if ch == ord('x'):
-                    pygame.mixer.stop()
+                    pygame.mixer.music.stop()
         stdscr.clear()
         pygame.mixer.quit()

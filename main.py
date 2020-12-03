@@ -3,20 +3,8 @@ from tinytag import TinyTag
 
 #MusicFolder = "./testfolder"
 MusicFolder = "/home/nonetrix/games/music"
-
 pause = 0
-
 stdscr = curses.initscr()
-
-def isPlaying(self):
-        return pygame.mixer.music.get_busy()
-
-def Keyboard(Keyboard):
-        while True:
-                time.sleep(1)
-                
-t1 = threading.Thread(target=Keyboard, args=(1,))
-t1.start()
 
 while True:
         SongSelected = MusicFolder + "/" + random.choice(os.listdir(MusicFolder))
@@ -37,6 +25,6 @@ while True:
                             pygame.mixer.music.pause()
                             pause = 1
                 if ch == ord('x'):
-                    break
+                    pygame.mixer.stop()
         stdscr.clear()
         pygame.mixer.quit()

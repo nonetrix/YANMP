@@ -21,7 +21,9 @@ plans:
 
 • time stamps and remaining time and etc
 
-• pause and play and rewind
+• pause and play ✅
+
+• rewind
 
 • visualizer
 

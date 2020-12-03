@@ -11,7 +11,7 @@ or yanmp
 
 plans:
 
-• ncurses UI
+• ncurses UI ✅
 
 • configuration file
 
